@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>go-sari chooga</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+		body {
+			margin: 0;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			background: linear-gradient(to bottom, palegreen, white);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-weight: normal;
+			font-family: "Edu AU VIC WA NT Hand", cursive;
+			font-optical-sizing: auto;
+			font-style: normal;
+		}
+
+		h1 {
+			position: fixed;
+			top: 20px;
+			text-align: center;
+			color: darkgreen;
+			font-weight: 600;
+			font-size: 44px;
+			text-shadow: whitesmoke 0 0 20px;
+		} 
+
+		h1:hover {
+				cursor: pointer;
+				color: blueviolet;
+		}
+
+		#gossari-1 {
+			transform: rotateY(0deg);
+			max-width: 400px;
+		}
+
+		@keyframes rotate {
+			0% {
+				transform: rotateY(0deg);
+			}
+
+			100% {
+				transform: rotateY(360deg);
+			}
+		}
+
+		.logo {
+			position: absolute;
+			width: 70%;
+			height: 70%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			border: 7px double darkgreen;
+			background-color: white;
+			overflow: visible; /* 이미지가 잘리지 않도록 설정 */
+		}
+
+		.logo img {
+			animation: rotate 10s infinite linear;
+			transform-style: preserve-3d;
+		}
+
+		.logo p {
+			text-align: center;
+			display: none;
+		}
+
+		ol {
+			position: fixed;
+			bottom: 10px;
+			left: 30px;
+			list-style: none;
+			line-height: 200%;
+			font-size: 24px;
+			color: darkgreen;
+		}
+
+		ul {
+			position: fixed;
+			bottom: 10px;
+			right: 30px;
+			list-style: none;
+			line-height: 200%;
+			font-size: 25px;
+			color: darkgreen;
+			text-align: right;
+		}
+
+		ul span {
+			font-size: 12px;
+		}
+
+		a { 
+			text-decoration: none;
+			color: darkgreen;
+		}
+
+		a:hover {
+			color: burlywood;
+		}
+
+		#my-video {
+			display: none;
+			position: fixed;
+			width: 200px;
+			height: auto;
+			border: 5px solid darkgreen;
+			background: white;			
+		}
+
+		/* 모바일 */
+		@media only screen and (max-width: 768px) {
+			h1 {
+				font-size: 32px;
+			}
+
+			.logo {
+				max-height: 90%;
+			}
+
+			.logo img {
+				width: 190px;
+			}
+
+			.logo p {
+				font-size: 12px;
+				word-wrap: break-word;
+				padding: 10px;
+			}
+
+			ol {
+				line-height: 160%;
+				font-size: 12px;
+				left: 10px;
+				bottom: 5px;
+			}
+
+			ul {
+				line-height: 160%;
+				font-size: 12px;
+				right: 10px;
+				bottom: 5px;
+			}
+
+			ul span {
+				font-size: 9px;
+		}
+
+		/* 데스크톱 */
+		@media only screen and (min-width: 1441px) {
+			#my-video {
+				width: 300px;
+				height: auto
+			}
+
+			.logo p {
+				font-size: 24px;
+			}
+
+			h1 {
+				font-size: 60px;
+			}
+
+			ol {
+				line-height: 200%;
+				font-size: 20px;
+				left: 30px;
+				bottom: 15px;
+			}
+
+			ul {
+				line-height: 200%;
+				font-size: 20px;
+				right: 30px;
+				bottom: 15px;
+			}
+
+			ul span {
+				font-size: 12px;
+		}
+
+		}
+	</style>
+</head>
+<body>
+	<h1>&#10086; Gossari Chooga &#10086;</h1>
+	<div class="logo">
+		<p>
+			고사리소울댄스클럽을 시작한 최혜민의 dance log입니다.
+			<br>
+			<br>
+			매 주차의 춤 조각들을 저장해두어<br>'춤추는 기쁨', '스스로를 귀여워하는 마음', '포기하지 않는 태도' 등을 상기합니다.
+			<br><br>
+			&#10086;
+			<br><br>
+			<u>고사리소울댄스클럽</u>(<a href="https://www.instagram.com/gossariclub/"; target="_blank">@gossariclub</a>)은 <br>소울 댄스라는 춤을 기반으로 장르의 구분없이 다양한 스텝을 배우는 댄스 클럽입니다. 
+			<br>
+			<br>
+			주혜 선생님(<a href="https://www.instagram.com/juhyeko/"; target="_blank">@juhyeko</a>)이 이끌어주시는 고사리소울댄스클럽에서는 춤을 매개로<br>친구를 사귀고, 영혼을 나누고, 자기 자신을 돌봅니다. 
+			<br>
+			<br>
+			<a href="https://www.instagram.com/juhyeko/"; target="_blank">join the gossariclub</a> 
+			
+		</p>
+		<img id="gossari-1" src="fern.png">
+	</div>
+
+	<ol>
+		<li><a href="#" data-video="gossari01.mp4">1</a></li>
+		<li><a href="#" data-video="gossari02.mp4">2</a></li>
+		<li><a href="#" data-video="gossari03.mp4">3</a></li>
+		<li>4</li>
+	</ol>
+
+	<ul>
+		<li><a href="https://www.youtube.com/watch?v=MOOXO0ShopI" target="_blank">Last Summer - Anri </a><span>2024.09.05</span></li>
+		<li><a href="https://youtu.be/Tlqexij-wjE" target="_blank">Georgy Porgy - TOTO, Cheryl Lynn </a><span>2024.09.12</span></li>
+		<li><a href="https://youtu.be/zmgXRfOk95E" target="_blank">Casanova L - Hiromi Iwasaki </a><span>2024.09.19</span></li>
+		<li><a href="https://www.youtube.com/watch?v=YyavSRDZTCo" target="_blank">With the Star - BRONZE, OOHYO </a><span>2024.09.26</span></li>
+	</ul>
+
+	<video id="my-video" controls>
+		<source id="video-source" src="" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+
+	<script type="text/javascript">
+		const olLinks = document.querySelectorAll('ol a'); // 모든 ol의 링크
+		const video = document.querySelector('#my-video'); // 비디오 엘리먼트
+		const videoSource = document.querySelector('#video-source'); // 비디오 소스
+		const logoImage = document.querySelector('.logo img'); // .logo 안의 이미지
+		const logoText = document.querySelector('.logo p'); // .logo 안의 텍스트
+		const header = document.querySelector('h1'); // h1 요소
+
+		// 이미지와 텍스트 번갈아 나타내기
+		let isTextVisible = false; // 텍스트가 보이는지 여부
+
+		header.addEventListener('click', () => {
+			if (isTextVisible) {
+				// 텍스트를 숨기고 이미지 표시
+				logoText.style.display = 'none';
+				logoImage.style.display = 'block';
+			} else {
+				// 이미지를 숨기고 텍스트 표시
+				logoImage.style.display = 'none';
+				logoText.style.display = 'block';
+			}
+			isTextVisible = !isTextVisible; // 상태 전환
+		});
+
+		// 각 링크에 대해 이벤트 리스너를 추가
+		olLinks.forEach(link => {
+			link.addEventListener('click', function(event) {
+				event.preventDefault(); // a 태그 기본 동작 방지
+				
+				const videoFile = this.getAttribute('data-video'); // data-video 속성에서 비디오 파일명 가져오기
+				
+				// 비디오가 이미 표시되어 있으면 숨기고 종료, 그리고 이미지 다시 표시
+				if (video.style.display === 'block' && videoSource.src.includes(videoFile)) {
+					video.style.display = 'none';
+					logoImage.style.display = 'block'; // 이미지 다시 표시
+					video.pause(); // 비디오 일시 정지
+				} else {
+					// 다른 비디오를 클릭했을 때 비디오 소스 업데이트
+					videoSource.src = videoFile;
+					video.load(); // 비디오 로드
+					video.style.display = 'block'; // 비디오 표시
+					video.play(); // 비디오 재생
+					logoImage.style.display = 'none'; // 비디오가 보일 때는 이미지 숨김
+				}
+			});
+		});
+	</script>
+</body>
+</html>
